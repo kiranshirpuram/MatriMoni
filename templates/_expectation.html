@@ -1,0 +1,67 @@
+<div class="well bs-component">
+	<form class="form-horizontal" name="formStep6.form" ng-submit="stepSix()" novalidate>
+		<fieldset>
+			<legend>Expectation</legend>
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<div class="form-group">
+						<label for="preferredCities" class="col-sm-4 control-label">Preferred cities</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" ng-model="register.preferredCities" ng-required="isRequired" name="preferredCities" id="preferredCities" placeholder="Preferred cities">
+							<span class="label is-error" ng-show="formStep6.form.preferredCities.$error.required && require">This is a mandatory field</span>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="expFeet" class="col-sm-4 control-label">Expected Min Height</label>
+						<div class="col-sm-4">
+						<input type="number" class="form-control" ng-model="register.expFeet" ng-required="isRequired" name="expFeet" id="expFeet" placeholder="Feet">
+						</div>
+						<div class="col-sm-4">
+						<input type="number" class="form-control" ng-model="register.expInches" ng-required="isRequired" name="expInches" id="expInches" placeholder="Inches">
+							<span class="label is-error" ng-show="formStep6.form.expFeet.$error.required && require">This is a mandatory field</span>
+							<span class="label is-error" ng-show="formStep6.form.expInches.$error.required && require">This is a mandatory field</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="ageDifference" class="col-sm-4 control-label">Max Age Difference</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" ng-model="register.ageDifference" ng-required="isRequired" name="ageDifference" id="ageDifference" placeholder="Max Age Difference">
+							<span class="label is-error" ng-show="formStep6.form.ageDifference.$error.required && require">This is a mandatory field</span>
+						</div>
+					</div>
+					
+										
+				</div>				
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					
+					<div class="form-group">
+						<label for="expIncome" class="col-sm-4 control-label">Expected Occupation & Income per Annum</label>
+						<div class="col-sm-8">
+							<textarea class="form-control" ng-model="register.expIncome" ng-required="isRequired" name="expIncome" id="expIncome" ></textarea>
+							<span class="label is-error" ng-show="formStep6.form.expIncome.$error.required && require">This is a mandatory field</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="expEdu" class="col-sm-4 control-label">Education</label>
+						<div class="col-sm-8">
+							<textarea class="form-control" ng-model="register.expEdu" ng-required="isRequired" name="expEdu" id="expEdu" ></textarea>
+							<span class="label is-error" ng-show="formStep6.form.expEdu.$error.required && require">This is a mandatory field</span>
+						</div>
+					</div>
+										
+				</div>	
+				
+			</div>
+			<div class="row">
+				<div class="col-lg-1 col-md-1 col-sm-2 col-xs-4">
+					<button type="button" ng-click="backToStepFive()" class="btn btn-secoundary">Back</button>
+				</div>
+				<div class="text-right col-lg-1 col-sm-2 col-md-2 col-xs-4 col-lg-offset-10 col-md-offset-9 col-sm-offset-8 col-xs-offset-4">
+                    <button type="submit" ng-click="require=true;isRequired = true;" class="btn btn-default">Submit</button>
+                </div>
+			</div>	
+		</fieldset>
+	</form>
+</div>
+	

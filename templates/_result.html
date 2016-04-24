@@ -1,0 +1,31 @@
+
+<div class="row">
+	<div class="col-lg-12">
+		<h1>Results</h1>	
+   </div>
+</div>
+<!-- <pagination boundary-links="true" items-per-page="6" total-items="totalItems" data-max-size="maxSize" ng-model="currentPage" class="pagination-sm secoundary" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination> -->
+<div class="row groom-repeat" >	
+	<div class="col-sm-2"  ng-repeat="item in resultList" >
+		<div class="panel profile-thumbnail panel-default">
+			<div class="panel-heading text-center"><strong>#{{item.userId}}</strong></div>
+			<div class="panel-body">
+				<a href="/"><img ng-src="public/images/{{ item.userId}}/{{item.imagePath}}" class="thumbnail img-responsive" width="200" height="100" />
+				<!-- <img gravatar-src="item.email" class="thumbnail img-responsive" gravatar-size="250" > --></a>
+				<ul class="nav">
+					<li><strong>{{ item.firstName}} {{ item.lastName}}</strong></li>
+					<li>DOB {{ item.dob}}</li>
+					<li>{{ item.occupation}}</li>
+					<li>{{ item.edu}}</li>
+					<li>Age: {{ item.age}}</li>
+					<li>Location : {{ item.occupationCity}}</li>
+				</ul>
+			</div>
+			<div class="profile-userbuttons panel-footer text-center">
+				<input type="button" class="btn btn-success btn-sm" ng-click="openProfile(item.userId)" value="View Full Profile" />
+			</div>
+		</div>              
+	</div>	
+</div>
+<!-- <pagination boundary-links="true" items-per-page="6" total-items="totalItems" data-max-size="maxSize" ng-model="currentPage" class="pagination-sm secoundary" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination> -->
+

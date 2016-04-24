@@ -1,0 +1,24 @@
+
+<div class="row">	
+	<div class="col-sm-2" ng-repeat="item in result | filter:search.name" >
+		<div class="panel profile-thumbnail panel-default">
+			<div class="panel-heading text-center"><strong>#152453</strong></div>
+			<div class="panel-body">
+				<a href="/"><img src="http://placehold.it/400x300"  class="img-responsive"></a>
+				<ul class="nav">
+					<li>{{ item.lastName}}</li>
+					<li>DOB {{ item.dob}}</li>
+					<li>{{ item.occupation}}</li>
+					<li>{{ item.edu}}</li>
+					<li>Age: {{ item.age}}</li>
+					<li>Location : {{ item.occupationCity}}</li>
+				</ul>
+			</div>
+			<div class="profile-userbuttons panel-footer text-center">
+				<input type="button" class="btn btn-success btn-sm" value="View Full Profile" />
+			</div>
+		</div>              
+	</div>	
+</div>
+
+

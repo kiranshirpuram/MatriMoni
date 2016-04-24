@@ -1,0 +1,211 @@
+<div class="row profile">
+				
+				<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+				
+				<div class="profile-sidebar">
+				<!-- SIDEBAR USERPIC -->
+
+					<div class="text-center" >
+					<img ng-src="public/images/{{ profileInfo.userId}}/{{profileInfo.imagePath}}" class="thumbnail img-responsive" width="250" height="100" />
+						<!-- <img gravatar-src="profileInfo.email" class="thumbnail img-responsive" gravatar-size="250" >	 -->
+					</div>										
+					<!-- END SIDEBAR USERPIC -->
+				<!-- SIDEBAR USER TITLE -->
+				<div class="profile-usertitle">
+					<div class="profile-usertitle-name">
+					<h3 >#{{profileInfo.userId}}</h3>
+					<span class="pink">{{profileInfo.firstName}}</span>	
+						{{profileInfo.lastName}}
+					</div>
+				
+				</div>
+				<!-- END SIDEBAR USER TITLE -->
+				
+				<!-- SIDEBAR MENU -->
+				<div class="profile-usermenu">
+					<ul class="nav">
+						<li class="active">
+							<a href="#">
+							<i class="fa fa-user"></i>
+							Personal </a>
+						</li>
+						<li>
+							<a href="#">
+							<i class="fa fa-home"></i>
+							Family Background</a>
+						</li>
+						<li>
+							<a href="#">
+							<i class="fa fa-graduation-cap"></i>
+							Education </a>
+						</li>
+						<li>
+							<a href="#">
+							<i class="fa fa-hand-o-right"></i>
+
+							Expectation </a>
+						</li>
+						
+					</ul>
+				</div>
+				<!-- END MENU -->
+				
+			</div>
+		</div>
+				<!--/col-->
+				
+				<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+					
+					<!--<ul ng-init="tab = 1" class="nav nav-tabs" id="myTab">
+					  	<li ng-class="{active:tab===1}"><a href="#" ng-click="tab=1">Information</a></li>
+					  	<li ng-class="{active:tab===2}"><a href="#" ng-click="tab=2">Photos</a></li>
+					</ul>
+
+					<div class="tab-content">
+						<div ng-class="{active:tab===1}" class="tab-pane" ng-show="tab===1" >
+							sdsdsds
+						</div>
+					  	
+					  	<div  ng-class="{active:tab===2}" class="tab-pane" ng-show="tab===2" >
+					  		as sds dsds	
+					  	</div>
+					</div>-->
+					
+					<div class="bs-component">
+
+              <div class="panel panel-default">
+                <div class="panel-heading"><i class="glyphicon glyphicon-user"></i> <strong>Personal</strong></div>
+                <div class="panel-body ">
+				<p>Hi All,</p>
+				<p><em><strong>"</strong>{{profileInfo.myself}}<strong>"</strong></em></p>
+				<hr/>
+				<div class="row">
+					<div class="col-lg-2 "><strong>DATE OF BIRTH</strong></div>
+					<div class="col-lg-2">{{profileInfo.dddob}}/{{profileInfo.mmdob}}/{{profileInfo.yydob}}</div>
+					<div class="col-lg-2 "><strong>CASTE</strong></div>
+					<div class="col-lg-2">{{profileInfo.religion}} - {{profileInfo.cast}}</div>
+					<div class="col-lg-2 "><strong>Age</strong></div>
+					<div class="col-lg-2">{{profileInfo.age}}</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-2 "><strong>HEIGHT</strong></div>
+					<div class="col-lg-2">{{profileInfo.feet}}' {{profileInfo.inches}}"</div>
+					<div class="col-lg-2 "><strong>EDUCATION</strong></div>
+					<div class="col-lg-2">{{profileInfo.edu}}</div>
+					<div class="col-lg-2 "><strong>OCCUPATION</strong></div>
+					<div class="col-lg-2">{{profileInfo.occupation}} - {{profileInfo.occupationCity}} {{profileInfo.income}}</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-2 "><strong>BLOOD GROUP</strong></div>
+					<div class="col-lg-2">{{profileInfo.bloodgr}}</div>
+					<div class="col-lg-2 "><strong>WEIGHT</strong></div>
+					<div class="col-lg-2">{{profileInfo.weight}} KG</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-2 "><strong>COMPLEXION</strong></div>
+					<div class="col-lg-2">{{profileInfo.complexion}}</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-2 "><strong>MANGAL</strong></div>
+					<div class="col-lg-2">{{profileInfo.mangal}}</div>
+					<div class="col-lg-2 "><strong>GOTRA</strong></div>
+					<div class="col-lg-2">{{profileInfo.gotraDevak}}</div>
+					<div class="col-lg-2 "><strong>DEVAK</strong></div>
+					<div class="col-lg-2">{{profileInfo.gotraDevak}}</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-2 "><strong>BIRTH PLACE</strong></div>
+					<div class="col-lg-2">{{profileInfo.birthPlace}}</div>
+					<div class="col-lg-2 "><strong>Time</strong></div>
+					<div class="col-lg-2">{{profileInfo.hrs}} {{profileInfo.min}}:{{profileInfo.timePeriod}}</div>
+					<div class="col-lg-2 "><strong>HORO DETAILS</strong></div>
+					<div class="col-lg-2">{{profileInfo.nadi}}
+{{profileInfo.nakshtra}}/
+{{profileInfo.rashi}}/
+{{profileInfo.gan}} /{{profileInfo.charan}}</div>
+				</div>
+                </div>
+              </div>
+			                <div class="panel panel-default">
+                <div class="panel-heading"><i class="glyphicon glyphicon-home"></i> <strong>Family Background</strong></div>
+                <div class="panel-body">
+				
+                	<p>{{profileInfo.fmbrief}}</p>
+					<hr/>
+	<div class="row">
+						<div class="col-lg-2 "><strong>MAMA</strong></div>
+					<div class="col-lg-2">{{profileInfo.mamaSurname}}</div>
+					<div class="col-lg-3 "><strong>RELATIVES</strong></div>
+					<div class="col-lg-5">{{profileInfo.relatives}}</div>
+				</div>
+			
+				
+			
+				<div class="row">
+					<div class="col-lg-2 "><strong>FAMILY Status</strong></div>
+					<div class="col-lg-2">{{profileInfo.familyStatus}}</div>
+					<div class="col-lg-3 "><strong>PARENTS RESIDING IN</strong></div>
+					<div class="col-lg-2">{{profileInfo.parentsResident}}</div>
+				</div>
+			
+			<div class="row">
+					<div class="col-lg-2 "><strong>FAMILY Type</strong></div>
+					<div class="col-lg-2">{{profileInfo.familyType}}</div>
+					<div class="col-lg-3 "><strong>Family Values</strong></div>
+					<div class="col-lg-2">{{profileInfo.familyValues}}</div>
+				</div>
+	<div class="row">
+					
+					<div class="col-lg-2 "><strong>NATIVE PLACE</strong></div>
+					<div class="col-lg-2">{{profileInfo.native}}</div>
+				</div>
+
+				
+                </div>
+              </div>
+			  
+			   <div class="panel panel-default">
+                <div class="panel-heading"><i class="fa fa-graduation-cap"></i> <strong>Education</strong></div>
+                <div class="panel-body">
+				<div class="row">
+					<div class="col-lg-2 "><strong>EDUCATION</strong></div>
+					<div class="col-lg-1">{{profileInfo.edu}}</div>
+					<div class="col-lg-2 "><strong>OCCUPATION</strong></div>
+					<div class="col-lg-2">{{profileInfo.occupation}}</div>
+					<div class="col-lg-3"><strong>OCCUPATION CITY</strong></div>
+					<div class="col-lg-2">{{profileInfo.occupationCity}}</div>
+					</div>
+                </div>
+              </div>
+			  
+			  
+			                <div class="panel panel-default">
+                <div class="panel-heading"><i class="fa fa-hand-o-right"></i> <strong>Expectation</strong></div>
+				
+                <div class="panel-body">
+					<div class="row">
+					<div class="col-lg-2 "><strong>AGE DIFFERENCE</strong></div>
+					<div class="col-lg-2">{{profileInfo.ageDifference}}</div>
+					<div class="col-lg-2 "><strong>HEIGHT </strong></div>
+					<div class="col-lg-2">{{profileInfo.expFeet}}' {{profileInfo.expInches}}"</div>
+					<div class="col-lg-2 "><strong>EDUCATION</strong></div>
+					<div class="col-lg-2">{{profileInfo.expEdu}}</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-2 "><strong>OCCUPATION</strong></div>
+					<div class="col-lg-2">{{profileInfo.expIncome}}</div>
+					<div class="col-lg-2 "><strong>PREFERRED CITY</strong></div>
+					<div class="col-lg-2">{{profileInfo.preferredCities}}</div>
+				</div>
+
+              </div>
+			              </div>
+						 
+
+
+           </div>
+					
+				</div><!--/col-->	
+
+			</div>
+

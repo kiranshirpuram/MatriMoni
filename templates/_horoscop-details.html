@@ -1,0 +1,193 @@
+<div class="well bs-component">
+	<form class="form-horizontal" name="formStep2.form" ng-submit="stepTwo()" novalidate >
+		<fieldset>
+			<legend>Horoscop Details</legend>
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<div class="form-group">
+						<label for="rashi" class="col-sm-4 control-label">Rashi</label>
+						<div class="col-sm-8">
+							<select class="form-control" ng-model="register.rashi" ng-required="isRequired" name="rashi" id="rashi">
+								<option value="" selected="selected">-Select-</option>
+								<option value="--">Don't Know</option>
+								<option value="Mesh">Mesh</option>
+								<option value="Vrushabh">Vrushabh</option>
+								<option value="mithun">Mithun</option>
+								<option value="kark">Kark</option>
+								<option value="sinha">Sinha</option>
+								<option value="kanya">Kanya</option>
+								<option value="tula">Tula</option>
+								<option value="vrischik">Vrischik</option>
+								<option value="dhanu">Dhanu</option>
+								<option value="makar">Makar</option>
+								<option value="kumbh">Kumbh</option>
+								<option value="meen">Meen</option>
+							</select>
+							<span class="label is-error" ng-show="formStep2.form.rashi.$error.required && require">This is a mandatory field</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="nakshtra" class="col-sm-4 control-label">Nakshtra</label>
+						<div class="col-sm-8">
+							<select class="form-control" ng-model="register.nakshtra" ng-required="isRequired" name="nakshtra" id="nakshtra">
+								  <option value="" selected="selected">-Select-</option>
+								  <option value="--">Don't Know</option>
+								  <option value="Ashwini">Ashwini</option>
+								  <option value="Ardra">Ardra</option>
+								  <option value="Aslesha">Aslesha</option>
+								  <option value="Anuradha">Anuradha</option>
+								  <option value="Bharani">Bharani</option>
+								  <option value="Chitra">Chitra</option>
+								  <option value="Dhanishta">Dhanishta</option>
+								  <option value="Hasta">Hasta</option>
+								  <option value="Jyeshta">Jyeshta</option>
+								  <option value="Krittika">Krittika</option>
+								  <option value="Moola">Moola</option>
+								  <option value="Magha">Magha</option>
+								  <option value="Mrigasira">Mrigasira</option>
+								  <option value="Pushya">Pushya</option>
+								  <option value="Purva Phalgini">Purva Phalgini</option>
+								  <option value="Purva Bhadra">Purva Bhadra</option>
+								  <option value="Purva Shadha">Purva Shadha</option>
+								  <option value="Punarvasu">Punarvasu</option>
+								  <option value="Rohini">Rohini</option>
+								  <option value="Swati">Swati</option>
+								  <option value="Revati">Revati</option>
+								  <option value="Shattarka">Shattarka</option>
+								  <option value="Shravan">Shravan</option>
+								  <option value="Uttara Phalguni">Uttara Phalguni</option>
+								  <option value="Uttara Bhadra">Uttara Bhadra</option>
+								  <option value="Uttara Shadha">Uttara Shadha</option>
+								  <option value="Vishakha">Vishakha</option>
+							</select>
+							<span class="label is-error" ng-show="formStep2.form.nakshtra.$error.required && require">This is a mandatory field</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="charan" class="col-sm-4 control-label">charan</label>
+						<div class="col-sm-8">
+							<select class="form-control" ng-model="register.charan" ng-required="isRequired" name="charan" id="charan">
+								<option value="" selected="selected">-Select-</option>
+								<option value="--">Don't Know</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+							<span class="label is-error" ng-show="formStep2.form.charan.$error.required && require">This is a mandatory field</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="nadi" class="col-sm-4 control-label">Nadi</label>
+						<div class="col-sm-8">
+							<select class="form-control" ng-model="register.nadi" ng-required="isRequired" name="nadi" id="nadi">
+								<option value="" selected="selected">-Select-</option>
+								<option value="--">Don't Know</option>
+								<option value="Adhya">Adhya</option>
+								<option value="Madhya">Madhya </option>
+								<option value="Antya">Antya</option>					
+							</select>
+							<span class="label is-error" ng-show="formStep2.form.nadi.$error.required && require">This is a mandatory field</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="gan" class="col-sm-4 control-label">Gan</label>
+						<div class="col-sm-8">
+							<select class="form-control" ng-model="register.gan" ng-required="isRequired" name="gan" id="gan">
+								<option value="" selected="selected">-Select-</option>
+								<option value="--">Don't Know</option>
+								 <option value="Dev Gan">Dev Gan</option>
+								 <option value="Manushya Gan">Manushya Gan</option>
+								 <option value="Rakshas Gan"> Rakshas Gan</option>
+							</select>
+							<span class="label is-error" ng-show="formStep2.form.gan.$error.required && require">This is a mandatory field</span>
+						</div>
+					</div>				
+				
+				
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<div class="form-group">
+						<label for="gotraDevak" class="col-sm-4 control-label">Gotra / Devak</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" ng-model="register.gotraDevak" ng-required="isRequired" name="gotraDevak"  id="gotraDevak" placeholder="Gotra / Devak">
+							<span class="label is-error" ng-show="formStep2.form.gotraDevak.$error.required && require">This is a mandatory field</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="mangal" class="col-sm-4 control-label">Mangal</label>
+						<div class="col-sm-8">
+							<select class="form-control" ng-model="register.mangal" ng-required="isRequired" name="mangal" id="mangal">
+								<option value="no" selected="selected">No</option>
+								<option value="yes" >Yes</option>
+							</select>
+							<span class="label is-error" ng-show="formStep2.form.mangal.$error.required && require">This is a mandatory field</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="hrs" class="col-sm-4 control-label">Birth Time</label>
+						<div class="form-inline col-sm-8">
+							<select name="f_h" class="form-control" ng-model="register.hrs" ng-required="isRequired" name="hrs" id="hrs">
+								<option value="" selected="selected">-Select-</option>
+								<option value="--">Don't Know</option>
+								<option value="01">01</option>
+								<option value="02">02</option>
+								<option value="03">03</option>
+								<option value="04">04</option>
+								<option value="05">05</option>
+								<option value="06">06</option>
+								<option value="08">08</option>
+								<option value="09">09</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>	
+							</select>
+							:
+							<select class="form-control" ng-model="register.min" ng-required="isRequired" name="min" id="min">
+								<option value="" selected="selected">-Select-</option>
+								<option value="--">Don't Know</option>
+								<option value="00">00</option>
+								<option value="01">01</option>
+								<option value="02">02</option>
+								<option value="03">03</option>
+								<option value="04">04</option>
+								<option value="05">05</option>
+								<option value="06">06</option>
+								<option value="08">08</option>
+								<option value="09">09</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>								
+							</select>
+							<select class="form-control" ng-model="register.timePeriod" ng-required="isRequired" name="timePeriod" id="timePeriod">
+							
+								<option value="00">AM</option>
+								<option value="01">PM</option>					
+							</select>
+								<span class="label is-error" ng-show="formStep2.form.hrs.$error.required && require">This is a mandatory field</span>
+								<span class="label is-error" ng-show="formStep2.form.min.$error.required && require">This is a mandatory field</span>
+								<span class="label is-error" ng-show="formStep2.form.timePeriod.$error.required && require">This is a mandatory field</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="birthPlace" class="col-sm-4 control-label">Birth Place</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" ng-model="register.birthPlace" ng-required="isRequired" name="birthPlace" id="birthPlace" placeholder="Birth Place	">
+							<span class="label is-error" ng-show="formStep2.form.birthPlace.$error.required && require">This is a mandatory field</span>
+						</div>
+					</div>
+				
+				</div>				
+			</div>
+			<div class="row">
+				<div class="col-lg-1 col-md-1 col-sm-2 col-xs-4">
+					<button type="button" ng-click="backToStepOne()" class="btn btn-secoundary">Back</button>
+				</div>
+				<div class="text-right col-lg-1 col-sm-2 col-md-1 col-xs-4 col-lg-offset-10 col-md-offset-10 col-sm-offset-8 col-xs-offset-4">
+                    <button type="submit" ng-click="require=true;isRequired = true;" class="btn btn-default">SKIP</button>
+                </div>
+			</div>	
+		</fieldset>
+	</form>
+</div>
+	

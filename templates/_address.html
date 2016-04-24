@@ -1,0 +1,55 @@
+<div class="well bs-component">
+	<form class="form-horizontal" name="formStep4.form" ng-submit="stepFour()" novalidate>
+		<fieldset>
+			<legend>Address</legend>
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<div class="form-group">
+						<label for="address" class="col-sm-4 control-label">Residence Address with city</label>
+						<div class="col-sm-8">
+							<textarea class="form-control" ng-model="register.address" ng-required="isRequired" name="address" id="address" ></textarea>
+							<span class="label is-error" ng-show="formStep4.form.address.$error.required && require">This is a mandatory field</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="pin" class="col-sm-4 control-label">Pin code no</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" ng-model="register.pin" ng-required="isRequired" id="pin" name="pin" placeholder="pin">
+							<span class="label is-error" ng-show="formStep4.form.pin.$error.required && require">This is a mandatory field</span>
+						</div>
+					</div>
+					
+				
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<div class="form-group">
+						<label for="phone2" class="col-sm-4 control-label">Phone</label>
+						<div class="col-sm-8">
+							<input type="tel" class="form-control" ng-model="register.phone2" ng-required="isRequired" name="phone2" id="phone2" placeholder="">
+							<span class="label is-error" ng-show="formStep2.form.phone2.$error.required && require">This is a mandatory field</span>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="phone3" class="col-sm-4 control-label">Mobile</label>
+						<div class="col-sm-8">
+							<input type="tel" class="form-control" ng-model="register.phone3" ng-required="isRequired" name="phone3" id="phone3"  placeholder="">
+							<span class="label is-error" ng-show="formStep4.form.phone3.$error.required && require">This is a mandatory field</span>
+						</div>
+					</div>
+				
+				
+				</div>				
+			</div>
+			<div class="row">
+				<div class="col-lg-1 col-md-1 col-sm-2 col-xs-4">
+					<button type="button" ng-click="backToStepThree()" class="btn btn-secoundary">Back</button>
+				</div>
+				<div class="text-right col-lg-1 col-sm-2 col-md-1 col-xs-4 col-lg-offset-10 col-md-offset-10 col-sm-offset-8 col-xs-offset-4">
+                    <button type="submit" ng-click="require=true;isRequired = true;" class="btn btn-default">Next</button>
+                </div>
+			</div>	
+		</fieldset>
+	</form>
+</div>
+	

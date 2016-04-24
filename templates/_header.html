@@ -1,0 +1,31 @@
+<!-- header part start here -->
+<div class="logo-icon"><span class="alpha" >Match</span><a href="#home" ><svg class="heart" enable-background="new 0 0 92.515 73.161" height="73.161px" version="1.1" viewBox="0 0 92.515 73.161" width="92.515px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px"> <g> <path d="M82.32,7.888c-8.359-7.671-21.91-7.671-30.271,0l-5.676,5.21l-5.678-5.21c-8.357-7.671-21.91-7.671-30.27,0
+  c-9.404,8.631-9.404,22.624,0,31.255l35.947,32.991L82.32,39.144C91.724,30.512,91.724,16.52,82.32,7.888z" fill="#010101"></path></g></svg></a><span class="omega " >Maker</div></span>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>           
+      </div>		  
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav" ng-controller="navCtrl">
+          <li ng-class="{ active: isActive('/home')}"><a href="#home">Home</a></li>
+          <li ng-class="{ active: isActive('/rules')}"><a href="#rules">Rules</a></li>
+          <li ng-class="{ active: isActive('/registration') || isActive('/confirmation') }"><a href="#registration">Enroll</a></li>
+          <li ng-class="{ active: isActive('/grooms')}"><a href="#grooms">Grooms</a></li>
+          <li ng-class="{ active: isActive('/brides')}"><a href="#brides">Brides</a></li>
+          <li ng-class="{ active: isActive('/stories')}"><a href="#stories">Stories</a></li>
+          <!--   <li ng-class="{ active: isActive('/upload')}"><a href="#upload">upload</a></li> -->
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+         <li><a href="#." class="mm-nav-search"  ng-show="hideSearch" ng-click="openSearchBox()" ><i class="fa fa-2x  fa-search "></i></a></li>
+       </ul>
+     </div><!--/.nav-collapse -->
+   </div><!--/.container-fluid -->
+ </nav>		  
+ <!-- ************* header end  ************* -->
+ <ng-include src="'templates/_search-box.html'"></ng-include>             

@@ -1,0 +1,351 @@
+<div class="well bs-component">
+	<form class="form-horizontal" name="formStep1.form" ng-submit="stepOne()" novalidate >
+		<fieldset>
+			<legend>Personal Details</legend>
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<div class="form-group">
+						<label for="firstName" class="col-sm-4 control-label">First Name</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="firstName" name="firstName" ng-required="isRequired" ng-model="register.firstName"  placeholder="First Name">
+							<span class="label is-error" ng-show="formStep1.form.firstName.$error.required && require">This is a mandatory field</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="lastName" class="col-sm-4 control-label">Last Name</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="lastName" name="lastname" ng-model="register.lastName" ng-required="isRequired" placeholder="Last Name">
+							<span class="label is-error" ng-show="formStep1.form.lastname.$error.required && require">This is a mandatory field</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="gender" class="col-sm-4 control-label">Gender</label>
+						<div class="col-sm-8">
+						<select class="form-control" ng-model="register.gender" ng-required="isRequired"  name="gender" id="gender">
+								<option value="" selected="selected">-Select-</option>
+								<option value="groom">Male</option>
+								<option value="bride" >Female</option>
+							</select>
+							<span class="label is-error" ng-show="formStep1.form.gender.$error.required && require">This is a mandatory field</span>
+						</div>						
+					</div>
+					<div class="form-group">
+						<label for="religion" class="col-sm-4 control-label">Religion</label>
+						<div class="col-sm-8">
+							<select class="form-control" name="religion" ng-required="isRequired" ng-model="register.religion" id="religion">
+								<option value="" selected="selected">-Select-</option>
+								<option value="buddhist">Buddhist</option>
+								<option value="christian" >Christian</option>
+								<option value="hindu" selected="selected">Hindu</option>								
+								<option value="jain">Jain</option>
+								<option value="jewish">Jewish</option>
+								<option value="muslim">Muslim</option>
+								<option value="parsi">Parsi</option>
+								<option value="sikh">Sikh</option>
+								<option value="spiritual">Spiritual</option>
+								<option value="other">Other</option>
+							</select>
+							<span class="label is-error" ng-show="formStep1.form.religion.$error.required && require">This is a mandatory field</span>
+						</div>
+					</div>
+					<div class="form-group" ng-if="register.religion==='hindu'" >
+						<label for="cast" class="col-sm-4 control-label">Cast</label>
+						<div class="col-sm-8">
+							<select name="cast" class="form-control" id="cast" ng-required="isRequired" ng-model="register.cast" >
+								<option value="">--Select--</option><option value="KOKA">96K Kokanastha</option><option value="ADIA">Adi Andhra</option><option value="ADDH">Adi Dharmi</option><option value="ADID">Adi Dravida</option><option value="ADIK">Adi Karnataka</option><option value="AGAR">Agarwal</option><option value="AGNI">Agnikula Kshatriya</option><option value="AGRI">Agri</option><option value="ASSE">Ahom</option><option value="AMBA">Ambalavasi</option><option value="AMIL">Amil Sindhi</option><option value="ANIN">Anglo Indian</option><option value="AREK">Arekatica</option><option value="AROR">Arora</option><option value="ARTR">Arunthathiyar</option><option value="ARYV">Arya Vysya</option><option value="ARYS">Aryasamaj</option><option value="AYYA">Ayyaraka</option><option value="BADA">Badaga</option><option value="BAHI">Bahi</option><option value="BDYA">Baidya</option><option value="BAIS">Baishnab</option><option value="AAAB">Baishya</option><option value="BALI">Balija</option><option value="BANI">Banik</option><option value="BANA">Baniya</option><option value="BANJ">Banjara</option><option value="BARA">Barai</option><option value="BARI">Bari</option><option value="BARJ">Barujibi</option><option value="BENG">Bengali</option><option value="BEST">Besta</option><option value="BHAN">Bhandari</option><option value="BTIA">Bhatia</option><option value="HBAB">Bhatraju</option><option value="BHAV">Bhavasar</option><option value="BVSR">Bhavsar</option><option value="BHOV">Bhovi</option><option value="BILL">Billava</option><option value="BISH">Bishnoi/Vishnoi</option><option value="BYER">Boyer</option><option value="BRAB">Brahmbatt</option><option value="BRAH">Brahmin</option><option value="ANAV">Brahmin - Anavil</option><option value="AUDI">Brahmin - Audichya</option><option value="BBRD">Brahmin - Barendra</option><option value="BENB">Brahmin - Bengali</option><option value="NBTB">Brahmin - Bhatt</option><option value="BRHB">Brahmin - Bhumihar</option><option value="IIRV">Brahmin - Daivadnya</option><option value="NMNN">Brahmin - Danua</option><option value="DAVA">Brahmin - Davadnya</option><option value="DESH">Brahmin - Deshastha</option><option value="DHIM">Brahmin - Dhiman</option><option value="BRDI">Brahmin - Dixit</option><option value="VDHD">Brahmin - Dravida</option><option value="GHMA">Brahmin - Garhwali</option><option value="BGAU">Brahmin - Gaur</option><option value="BRGO">Brahmin - Goswami/Gosavi</option><option value="GOUR">Brahmin - Gour</option><option value="GRRN">Brahmin - Gujar Gaur</option><option value="BGRK">Brahmin - Gurukkal</option><option value="AHHR">Brahmin - Halua</option><option value="HAVY">Brahmin - Havyaka</option><option value="AARH">Brahmin - Hoysala</option><option value="BIGR">Brahmin - Iyengar</option><option value="IYEB">Brahmin - Iyer</option><option value="BIMI">Brahmin - Jangid</option><option value="RNGA">Brahmin - Jangra</option><option value="MNNH">Brahmin - Jhadua</option><option value="BRKA">Brahmin - Kanyakubj</option><option value="KARH">Brahmin - Karhade</option><option value="KASH">Brahmin - Kashmiri Pandit</option><option value="BRKO">Brahmin - Kokanastha</option><option value="KKKI">Brahmin - Kota</option><option value="BKLN">Brahmin - Kulin</option><option value="KUBR">Brahmin - Kumoani</option><option value="BMDV">Brahmin - Madhwa</option><option value="MABR">Brahmin - Maharashtrian</option><option value="MAIT">Brahmin - Maithil</option><option value="NRAM">Brahmin - Modh</option><option value="AMHN">Brahmin - Mohyal</option><option value="NAGA">Brahmin - Nagar</option><option value="IIMR">Brahmin - Namboodiri</option><option value="BNDY">Brahmin - Narmadiya</option><option value="GYAN">Brahmin - Niyogi</option><option value="RBRR">Brahmin - Others</option><option value="LNRA">Brahmin - Paliwal</option><option value="PNPP">Brahmin - Panda</option><option value="PNIR">Brahmin - Pandit</option><option value="PUBR">Brahmin - Punjabi</option><option value="BPSK">Brahmin - Pushkarna</option><option value="BRHI">Brahmin - Rarhi</option><option value="BRVD">Brahmin - Rigvedi</option><option value="BRRJ">Brahmin - Rudraj</option><option value="BSKD">Brahmin - Sakaldwipi</option><option value="BSYA">Brahmin - Sanadya</option><option value="NRNI">Brahmin - Sanketi</option><option value="SARA">Brahmin - Saraswat</option><option value="BRSA">Brahmin - Saryuparin</option><option value="AISA">Brahmin - Shivhalli</option><option value="LAAR">Brahmin - Shrimali</option><option value="AAKH">Brahmin - Sikhwal</option><option value="BSRT">Brahmin - Smartha</option><option value="NBBR">Brahmin - Sri Vaishnava</option><option value="NSKM">Brahmin - Stanika</option><option value="TEBR">Brahmin - Telugu</option><option value="BRTY">Brahmin - Tyagi</option><option value="VAID">Brahmin - Vaidiki</option><option value="HIBS">Brahmin - Vaikhanasa</option><option value="NNAH">Brahmin - Velanadu</option><option value="BYBV">Brahmin - Vyas</option><option value="GOSB">Brahmin -Gowd Saraswat</option><option value="NIYO">Brahmin 6000 Niyogi</option><option value="BRKM">Brahmin Kanada Madhva</option><option value="BSVL">Brahmin Shivalli</option><option value="BVSW">Brahmin Viswa</option><option value="BUNT">Bunt</option><option value="YBTU">Bunt (Shetty)</option><option value="CHMR">Chambhar</option><option value="CKP">Chandraseniya Kayastha Prab</option><option value="CHAN">Chandravanshi Kahar</option><option value="CHAS">Chasa</option><option value="CHAT">Chattada Sri Vaishnava</option><option value="CHAD">Chaudary</option><option value="CHAU">Chaurasia</option><option value="CHET">Chettiar</option><option value="CHHA">Chhapru Sindhi</option><option value="CHTR">Chhetri</option><option value="CHIP">Chippolu (Mera)</option><option value="CKPP">CKP</option><option value="COOR">Coorgi</option><option value="DADU">Dadu Sindhi</option><option value="DARJ">Darji</option><option value="DEVD">Devadiga</option><option value="DEVA">Devandra Kula Vellalar</option><option value="GIGI">Devang Koshthi</option><option value="DEVG">Devanga</option><option value="THEV">Devar/Thevar/Mukkulathor</option><option value="DRKV">Devendra Kula Vellalar</option><option value="DHAN">Dhaneshawat Vaish</option><option value="DHNR">Dhangar</option><option value="DHVR">Dheevara</option><option value="MNHN">Dhiman</option><option value="DHOB">Dhoba</option><option value="DHOI">Dhobi</option><option value="DUMA">Dumal</option><option value="DUSA">Dusadh (Paswan)</option><option value="EDIG">Ediga</option><option value="EZHA">Ezhava</option><option value="EZHU">Ezhuthachan</option><option value="GABI">Gabit</option><option value="GAND">Ganda</option><option value="GNDL">Gandla</option><option value="GNIG">Ganiga</option><option value="GSTY">Ganigashetty</option><option value="GARR">Garhwali Rajput</option><option value="GVLI">Gavali</option><option value="GVRA">Gavara</option><option value="GAWA">Gawali</option><option value="GHIS">Ghisadi</option><option value="GUMR">Ghumar</option><option value="GOAL">Goala</option><option value="GOAN">Goan</option><option value="GOMA">Gomantak</option><option value="GOMM">Gomantak Maratha</option><option value="GOND">Gondhali</option><option value="GOSW">Goswami</option><option value="MAGA">Goswami/Gosavi Brahmin</option><option value="GOUD">Goud</option><option value="GOUN">Gounder</option><option value="GOWD">Gowda</option><option value="GRAM">Gramani</option><option value="GUDI">Gudia</option><option value="GUJA">Gujarati</option><option value="GUJJ">Gujjar</option><option value="GUPT">Gupta</option><option value="NGTN">Guptan</option><option value="GURA">Gurav</option><option value="GURJ">Gurjar</option><option value="HEGD">Hegde</option><option value="HIMA">Himachali</option><option value="HOTH">Hindu-Others</option><option value="HUGA">Hugar (Jeer)</option><option value="HYDE">Hyderabadi Sindhi</option><option value="INTC">Intercaste</option><option value="IRAN">Irani</option><option value="JAAL">Jaalari</option><option value="JAIS">Jaiswal</option><option value="JAND">Jandra</option><option value="JANG">Jangam</option><option value="JAT">Jat</option><option value="JATV">Jatav</option><option value="JEER">Jeer</option><option value="JOGI">Jogi (Nath)</option><option value="KACH">Kachara</option><option value="KADA">Kadava Patel</option><option value="KAHA">Kahar</option><option value="KBTR">Kaibarta</option><option value="KALA">Kalal</option><option value="KALR">Kalar</option><option value="KALI">Kalinga</option><option value="KALV">Kalinga Vysya</option><option value="TAAI">Kalita</option><option value="KALW">Kalwar</option><option value="KAMB">Kamboj</option><option value="KAMM">Kamma</option><option value="KANN">Kannada Mogaveera</option><option value="KANS">Kansari</option><option value="KAPU">Kapu</option><option value="KANA">Kapu Naidu</option><option value="KRNA">Karana</option><option value="KMKR">Karmakar</option><option value="KARU">Karuneegar</option><option value="KASA">Kasar</option><option value="KAAP">Kashyap</option><option value="KATI">Katiya</option><option value="KAYA">Kayastha</option><option value="KERA">Keralite</option><option value="KDYT">Khandayat</option><option value="KHWL">Khandelwal</option><option value="KHAR">Kharwar</option><option value="KTIK">Khatik</option><option value="KHAT">Khatri</option><option value="KHUK">Khukhrain</option><option value="KOIR">Koiri</option><option value="KOLI">Koli</option><option value="VKKH">Koli Mahadev</option><option value="KONG">Kongu Vellala Gounder</option><option value="SAHH">Konkanastha Maratha</option><option value="KONK">Konkani</option><option value="KORI">Kori</option><option value="KOSH">Koshti</option><option value="KSHA">Kshatriya</option><option value="KUDU">Kudumbi</option><option value="KULA">Kulal</option><option value="KULR">Kulalar</option><option value="KULI">Kulita</option><option value="KUMN">Kumaoni</option><option value="KURA">Kumaoni Rajput</option><option value="KUMA">Kumawat</option><option value="KUMB">Kumbara</option><option value="KUMK">Kumbhakar</option><option value="UUHM">Kumbhar</option><option value="KUMH">Kumhar</option><option value="KMRI">Kummari</option><option value="KUNB">Kunbi</option><option value="NKRU">Kuravan</option><option value="KURM">Kurmi</option><option value="AYIS">Kurmi Kshatriya</option><option value="KURUB">Kuruba</option><option value="TKTR">Kuruhina Shetty</option><option value="KURB">Kurumbar</option><option value="KUSW">Kushwaha</option><option value="KUSH">Kushwaha (Koiri)</option><option value="KUTC">Kutchi</option><option value="LAMB">Lambadi</option><option value="LMBN">Lambani</option><option value="LEVA">Leva patel</option><option value="LEPD">Leva Patidar</option><option value="LEVP">Leva patil</option><option value="LING">Lingayath</option><option value="LODH">Lodhi Rajput</option><option value="LOHA">Lohana</option><option value="ANNN">Lohana Sindhi</option><option value="LOHR">Lohar</option><option value="LBNA">Lubana</option><option value="MADG">Madiga</option><option value="MHJN">Mahajan</option><option value="MAHA">Mahar</option><option value="MAHS">Maharashtrian</option><option value="MAHE">Mahendra</option><option value="MAHW">Maheshwari</option><option value="MAHI">Mahishya</option><option value="MHSY">Mahisya</option><option value="MAJB">Majabi</option><option value="MLAA">Mala</option><option value="MLLI">Malayalee</option><option value="MANA">Malayalee Namboodiri</option><option value="MALI">Mali</option><option value="MLLH">Mallah</option><option value="MANG">Mangalorean</option><option value="MANI">Manipuri</option><option value="MRKP">Mannuru Kapu</option><option value="MAPI">Mapila</option><option value="MARADESH">Deshmukh Maratha</option><option value="MARA96">96Kuli Maratha</option><option value="MARA">Maratha</option><option value="MARU">Maruthuvar</option><option value="MARV">Marvar</option><option value="MARW">Marwari</option><option value="MATA">Matang</option><option value="MATH">Mathur</option><option value="MAUR">Maurya</option><option value="MENA">Meena</option><option value="MNVR">Meenavar</option><option value="MEHR">Mehra</option><option value="MENO">Menon</option><option value="MERA">Mera</option><option value="MERU">Meru</option><option value="MDRJ">Meru Darji</option><option value="MOCH">Mochi</option><option value="MODK">Modak</option><option value="MGVR">Mogaveera</option><option value="MNCH">Monchi</option><option value="MUDA">Mudaliar</option><option value="MDST">Mudaliar - Senguntha</option><option value="MUAR">Mudaliar Arcot</option><option value="MUSA">Mudaliar Saiva</option><option value="RARR">Mudaliyar</option><option value="MUDR">Mudiraj</option><option value="MUKK">Mukkulathor</option><option value="MUKU">Mukulathur</option><option value="KPMR">Munnuru Kapu</option><option value="MTRJ">Muthuraja</option><option value="NAAG">Naagavamsam</option><option value="NADA">Nadar</option><option value="UNAA">Nagaralu</option><option value="AINA">Nai</option><option value="NAID">Naidu</option><option value="NAIK">Naik</option><option value="NINY">Naik/Nayaka</option><option value="AAKI">Naika</option><option value="NAIR">Nair</option><option value="NAVA">Nair Vaniya</option><option value="NAVL">Nair Vilakkithala</option><option value="NSDR">Namasudra</option><option value="NAMB">Nambiar</option><option value="NMBD">Namboodiri</option><option value="NAMO">Namosudra</option><option value="NAPT">Napit</option><option value="NATH">Nath</option><option value="NAYA">Nayaka</option><option value="NEEL">Neeli</option><option value="NEPA">Nepali</option><option value="NHAV">Nhavi</option><option value="OBCB">OBC/Barber/Naayee</option><option value="ORIY">Oriya</option><option value="OSWL">Oswal</option><option value="OTAR">Otari</option><option value="PADS">Padmashali</option><option value="AAPA">Pal</option><option value="PANC">Panchal</option><option value="PAND">Pandaram</option><option value="PANK">Panicker</option><option value="PRKK">Parkava Kulam</option><option value="PARS">Parsi</option><option value="PART">Partraj</option><option value="PASI">Pasi</option><option value="PASW">Paswan</option><option value="PTEL">Patel</option><option value="PATD">Patel Desai</option><option value="PADD">Patel Dodia</option><option value="PATK">Patel Kadva</option><option value="PATL">Patel Leva</option><option value="PATH">Pathare Prabhu</option><option value="PTIL">Patil</option><option value="PTLV">Patil Leva</option><option value="PTNK">Patnaick</option><option value="PATN">Patnaick/Sistakaranam</option><option value="PATR">Patra</option><option value="PERI">Perika</option><option value="PILL">Pillai</option><option value="POOS">Poosala</option><option value="PORW">Porwal</option><option value="PRAJ">Prajapati</option><option value="PUNJ">Punjabi</option><option value="RAIG">Raigar</option><option value="RJKA">Rajaka</option><option value="RAJA">Rajastani</option><option value="RAJB">Rajbhar</option><option value="JJAI">Rajbonshi</option><option value="RAJP">Rajput</option><option value="RAJR">Rajput Rohella/Tank</option><option value="RAMS">Ramdasia</option><option value="RAMG">Ramgariah</option><option value="RAVS">Ravidasia</option><option value="RAWA">Rawat</option><option value="REDD">Reddy</option><option value="RELL">Relli</option><option value="ROHI">Rohiri Sindhi</option><option value="SADG">Sadgope</option><option value="SAHA">Saha</option><option value="SAHI">Sahiti Sindhi</option><option value="SAHU">Sahu</option><option value="SAIN">Saini</option><option value="SAKK">Sakkhar Sindhi</option><option value="SALY">Saliya</option><option value="SOWR">Saurashtra</option><option value="SAVJ">Savji</option><option value="SCHE">Scheduled Caste</option><option value="SCTR">Scheduled Tribe</option><option value="SETV">Senai Thalaivar</option><option value="SENG">Senguntha Mudaliyar</option><option value="SEPA">Sepahia</option><option value="SETT">Setti Balija</option><option value="ASII">Settibalija</option><option value="SHAH">Shah</option><option value="SHTY">Shetty</option><option value="SMPI">Shimpi</option><option value="SIND">Sindhi</option><option value="DMHI">Sindhi-Amil</option><option value="SIHB">Sindhi-Baibhand</option><option value="BHNB">Sindhi-Bhanusali</option><option value="IDHS">Sindhi-Bhatia</option><option value="SSAH">Sindhi-Chhapru</option><option value="DUSD">Sindhi-Dadu</option><option value="BHBN">Sindhi-Hyderabadi</option><option value="AHIS">Sindhi-Larai</option><option value="SRAS">Sindhi-Larkana</option><option value="LNON">Sindhi-Lohana</option><option value="ISOI">Sindhi-Rohiri</option><option value="ISHS">Sindhi-Sahiti</option><option value="HAHK">Sindhi-Sakkhar</option><option value="ININ">Sindhi-Sehwani</option><option value="RAIR">Sindhi-Shikarpuri</option><option value="ANIA">Sindhi-Thatai</option><option value="SKK">SKP</option><option value="SOMV">Somvanshi</option><option value="SONA">Sonar</option><option value="SONI">Soni</option><option value="SOUR">Sourashtra</option><option value="SOZH">Sozhiya Vellalar</option><option value="SRIS">Srisayana</option><option value="SSYN">Srisayani</option><option value="SUGA">Sugali (Naika)</option><option value="SUNA">Sunari</option><option value="SUND">Sundhi</option><option value="SUTA">Sutar</option><option value="SUTH">Suthar</option><option value="SWAK">Swakula Sali</option><option value="SWAR">Swarnakar</option><option value="TAMB">Tamboli</option><option value="TAMI">Tamil</option><option value="TLYV">Tamil Yadava</option><option value="TANT">Tanti</option><option value="TATB">Tantubai</option><option value="TATW">Tantuway</option><option value="TLGA">Telaga</option><option value="TELI">Teli</option><option value="TELU">Telugu</option><option value="THAK">Thakkar</option><option value="KOKH">Thakore</option><option value="TRHH">Thakur</option><option value="THAT">Thatai Sindhi</option><option value="THIG">Thigala</option><option value="THIY">Thiyya</option><option value="TILI">Tili</option><option value="TOGA">Togata</option><option value="TONR">Tonk Kshatriya</option><option value="TURU">Turupu Kapu</option><option value="UDAY">Udayar</option><option value="UPPR">Uppara</option><option value="URAL">Urali Gounder</option><option value="RRSU">Urs</option><option value="VADA">Vada Balija</option><option value="VDGL">Vadagalai</option><option value="VADR">Vaddera</option><option value="VANA">Vaish</option><option value="VAIS">Vaishnav</option><option value="VABH">Vaishnav Bhatia</option><option value="VAVA">Vaishnav Vania</option><option value="VVSN">Vaishnav Vanik</option><option value="VAIA">Vaishnava</option><option value="ASIH">Vaishya</option><option value="NVAH">Vaishya Vani</option><option value="VALL">Valluvan</option><option value="VALM">Valmiki</option><option value="VANI">Vania</option><option value="VANY">Vaniya</option><option value="VNJA">Vanjara</option><option value="VANJ">Vanjari</option><option value="VNKR">Vankar</option><option value="VANR">Vannar</option><option value="VASH">Vannia Kula Kshatriyar</option><option value="VANN">Vanniyar</option><option value="MALA">Variar</option><option value="VARS">Varshney</option><option value="VSVM">Veera Saivam</option><option value="VEER">Veerashaiva</option><option value="VELL">Velaan/Vellalar</option><option value="VEMA">Velama</option><option value="VELR">Vellalar</option><option value="VDKL">Vellalar Devandra Kula</option><option value="VELE">Veluthedathu Nair</option><option value="VETT">Vettuva Gounder</option><option value="VILA">Vilakkithala Nair</option><option value="VISH">Vishwakarma</option><option value="VISW">Viswabrahmin</option><option value="VOKA">Vokkaliga</option><option value="VYSY">Vysya</option><option value="YADA">Yadav</option><option value="YELL">Yellapu</option>								
+							</select>
+							
+							<span class="label is-error" ng-show="formStep1.form.fh.$error.required && require">This is a mandatory field</span>
+						</div>
+					</div>
+					<div class="form-group" ng-if="register.religion==='christian'" >
+						<label for="cast" class="col-sm-4 control-label">Cast</label>
+						<div class="col-sm-8">
+							<select name="cast" class="form-control" id="cast" ng-required="isRequired" ng-model="register.cast" >
+								<option value="">--Select--</option><option value="CATH">Catholic</option><option value="ORTD">Orthodox</option><option value="COTH">Others</option><option value="PROT">Protestant</option>
+							</select>
+							<span class="label is-error" ng-show="formStep1.form.fh.$error.required && require">This is a mandatory field</span>
+						</div>
+					</div>
+					<div class="form-group" ng-if="register.religion==='jain'" >
+						<label for="cast" class="col-sm-4 control-label">Cast</label>
+						<div class="col-sm-8">
+							<select  name="cast" class="form-control" id="cast" ng-required="isRequired" ng-model="register.cast" >
+								<option value="">--Select--</option><option value="DIGA">Digambar</option><option value="JOTH">Jain-Others</option><option value="SHEW">Shewetamber</option>
+							</select>
+							<span class="label is-error" ng-show="formStep1.form.fh.$error.required && require">This is a mandatory field</span>
+						</div>
+					</div>
+					<div class="form-group" ng-if="register.religion==='muslim'" >
+						<label for="cast" class="col-sm-4 control-label">Cast</label>
+						<div class="col-sm-8">
+							<select  name="cast" class="form-control" id="cast" ng-required="isRequired" ng-model="register.cast" >
+								<option value="">--Select--</option><option value="MOTH">Others</option><option value="SHIA">Shia</option><option value="SUNN">Sunni</option>
+							</select>
+							<span class="label is-error" ng-show="formStep1.form.fh.$error.required && require">This is a mandatory field</span>
+						</div>
+					</div>
+					<div class="form-group" ng-if="register.religion==='sikh'" >
+						<label for="cast" class="col-sm-4 control-label">Cast</label>
+						<div class="col-sm-8">
+							<select  name="cast" class="form-control" id="cast" ng-required="isRequired" ng-model="register.cast" >
+								<option value="">--Select--</option><option value="AHLU">Sikh - Ahluwalia</option><option value="ARRA">Sikh - Arora</option><option value="BHTI">Sikh - Bhatia</option><option value="BHTR">Sikh - Bhatra</option><option value="SHAV">Sikh - Clean Shaven</option><option value="GHUA">Sikh - Ghumar</option><option value="GURS">Sikh - Gursikh</option><option value="INTR">Sikh - Intercaste</option><option value="JATA">Sikh - Jat</option><option value="KMBJ">Sikh - Kamboj</option><option value="KESA">Sikh - Kesadhari</option><option value="SKHA">Sikh - Khatri</option><option value="KSHT">Sikh - Kshatriya</option><option value="LUBN">Sikh - Lubana</option><option value="MAJA">Sikh - Majabi</option><option value="SOTH">Sikh - Others</option><option value="RJPT">Sikh - Rajput</option><option value="RAMD">Sikh - Ramdasia</option><option value="SRAM">Sikh - Ramgharia</option><option value="RAVD">Sikh - Ravidasia</option><option value="SANI">Sikh - Saini</option><option value="TONK">Sikh - Tonk Kshatriya</option>
+							</select>
+							<span class="label is-error" ng-show="formStep1.form.fh.$error.required && require">This is a mandatory field</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="bloodGr" class="col-sm-4 control-label">Blood Group</label>
+						<div class="col-sm-8">
+							<select class="form-control" ng-model="register.bloodgr"  ng-required="isRequired" name="bloodgr" id="bloodGr">
+								<option value="" selected="selected">-Select-</option>
+								<option value="A+">A+</option>
+								<option value="A-">A-</option>
+								<option value="B+">B+</option>
+								<option value="B-">B-</option>
+								<option value="AB+">AB+</option>
+								<option value="AB-">AB-</option>
+								<option value="O+">O+</option>
+								<option value="O-">O-</option>
+								<option value="--">Don't Know</option>
+							</select>
+							<span class="label is-error" ng-show="formStep1.form.bloodgr.$error.required && require">This is a mandatory field</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="feet" class="col-sm-4 control-label">Height</label>
+						<div class="col-sm-4"><input type="number" class="form-control" ng-model="register.feet" ng-required="isRequired" name="feet" id="feet" placeholder="Feet"></div>
+						<div class="col-sm-4"><input type="number" class="form-control" ng-model="register.inches" ng-required="isRequired" name="inches" id="inches" placeholder="inches">
+							
+						</div>
+					</div>
+					<div class="col-sm-offset-4"><span class="label is-error" ng-show="formStep1.form.feet.$error.required && require">This is a mandatory field</span>
+							<span class="label is-error" ng-show="formStep1.form.inches.$error.required && require">This is a mandatory field</span></div>
+					<div class="form-group">
+						<label for="phyDis" class="col-sm-4 control-label">Physical status</label>
+						<div class="col-sm-8">
+							<select class="form-control"  ng-model="register.phyDis" ng-required="isRequired" name="phyDis" id="phyDis">
+								<option value="" selected="selected">-Select-</option>
+								<option value="no" >Normal</option>
+								<option value="yes" >Physically Challenged</option>
+							</select>
+							<span class="label is-error" ng-show="formStep1.form.phyDis.$error.required && require">This is a mandatory field</span>
+						</div>
+					</div>
+					<div class="form-group" ng-if="register.phyDis==='yes'">
+						<label for="physical" class="col-sm-4 control-label">If yes, pl specify</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" ng-model="register.physical" name="physical" ng-required="isRequired && register.phyDis==='yes'"  id="physical" placeholder="">
+							<span class="label is-error" ng-show="formStep1.form.physical.$error.required && require">This is a mandatory field</span>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="smoking" class="col-sm-4 control-label">Smoking</label>
+						<div class="form-inline col-sm-8">
+							<label class="radio-inline">
+							  <input type="radio" ng-model="register.smoking" ng-required="isRequired" name="smoking" id="smokingY" value="yes"> Yes
+							</label>
+							<label class="radio-inline">
+							  <input type="radio" ng-model="register.smoking" ng-required="isRequired" name="smoking" id="smokingN" value="no"> No
+							</label>
+							<label class="radio-inline">
+							  <input type="radio" ng-model="register.smoking" ng-required="isRequired" name="smoking" id="smokingO" value="occasionally"> Occasionally
+							</label>
+							<span class="label is-error" ng-show="formStep1.form.smoking.$error.required && require">This is a mandatory field</span>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="drinking" class="col-sm-4 control-label">Drinking</label>
+						<div class="form-inline col-sm-8">
+							<label class="radio-inline">
+							  <input type="radio" ng-model="register.drinking" ng-required="isRequired" name="drinking" id="drinkingY" value="yes"> Yes
+							</label>
+							<label class="radio-inline">
+							  <input type="radio" ng-model="register.drinking" ng-required="isRequired" name="drinking" id="drinkingN" value="no"> No
+							</label>
+							<label class="radio-inline">
+							  <input type="radio" ng-model="register.drinking" ng-required="isRequired" name="occasionally" id="occasionally" value="occasionally"> Occasionally
+							</label>
+							<span class="label is-error" ng-show="formStep1.form.drinking.$error.required && require">This is a mandatory field</span>
+						</div>
+					</div>					
+					
+				</div>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<div class="form-group">
+						<label for="myself" class="col-sm-4 control-label">About Me</label>
+						<div class="col-sm-8">
+							<textarea ng-model="register.myself" ng-required="isRequired" id="myself" name="myself" class="form-control"></textarea>.<span class="label is-error" ng-show="formStep1.form.myself.$error.required && require">This is a mandatory field</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="bodyType" class="col-sm-4 control-label">Body Type</label>
+						<div class="col-sm-8">						
+						<select class="form-control" class="form-control"  ng-model="register.bodyType" ng-required="isRequired"  name="bodyType" id="bodyType" placeholder="bodyType">
+							<option value="" selected="selected">-Select-</option>
+							<option value="slim">Slim</option>
+							<option value="average">Average</option>
+							<option value="athletic">Athletic</option>
+							<option value="heavy">Heavy</option>
+						</select>
+						<span class="label is-error" ng-show="formStep1.form.bodyType.$error.required && require">This is a mandatory field</span>
+						</div>
+					</div>
+						<div class="form-group">
+						<label for="email" class="col-sm-4 control-label">Email Id</label>
+						<div class="col-sm-8">
+							<input type="email" class="form-control"  ng-model="register.email" ng-required="isRequired" name="email" id="email" placeholder="Email">
+							<span class="label is-error" ng-show="formStep1.form.email.$error.required && require">This is a mandatory field</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="dddob" class="col-sm-4 control-label">Date Of Birth</label>
+						<div class="form-inline col-sm-2">
+							<select class="form-control col-sm-4" ng-model="register.dddob" ng-required="isRequired"  name="dddob" id="dddob" placeholder="DD">
+							<option value="">-DD-</option>
+							<option value="01">01</option>
+							<option value="02">02</option>
+							<option value="03">03</option>
+							<option value="04">04</option>
+							<option value="05">05</option>
+							<option value="06">06</option>
+							<option value="07">07</option>
+							<option value="08">08</option>
+							<option value="09">09</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+							<option value="21">21</option>
+							<option value="22">22</option>
+							<option value="23">23</option>
+							<option value="24">24</option>
+							<option value="25">25</option>
+							<option value="26">26</option>
+							<option value="27">27</option>
+							<option value="28">28</option>
+							<option value="29">29</option>
+							<option value="30">30</option>
+							<option value="31">31</option>
+						</select>
+						 <span class="label is-error" ng-show="formStep1.form.dddob.$error.required && require">This is a mandatory field</span>
+						</div>
+						<div class="form-inline col-sm-3">
+						<select class="form-control" class="form-control"  ng-model="register.mmdob" ng-required="isRequired"  name="mmdob" id="mmdob" placeholder="MM">
+							<option value="">-MM-</option>
+							<option value="01">January</option>
+							<option value="02">February</option>
+							<option value="03">March</option>
+							<option value="04">April</option>
+							<option value="05">May</option>
+							<option value="06">June</option>
+							<option value="07">July</option>
+							<option value="08">August</option>
+							<option value="09">September</option>
+							<option value="10">October</option>
+							<option value="11">November</option>
+							<option value="12">December</option>
+						</select>
+						<span class="label is-error" ng-show="formStep1.form.mmdob.$error.required && require">This is a mandatory field</span>
+						</div>
+						<div class="form-inline col-sm-3">
+						<select class="form-control" class="form-control"  ng-model="register.yydob" ng-required="isRequired"  name="yydob" id="yydob" placeholder="YYYY">
+						  <option value="">-YYYY-</option>
+						  <option value="2015">2015</option>
+						  <option value="2014">2014</option>
+						  <option value="2013">2013</option>
+						  <option value="2012">2012</option>
+						  <option value="2011">2011</option>
+						  <option value="2010">2010</option>
+						  <option value="2009">2009</option>
+						  <option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1985">1985</option><option value="1984">1984</option><option value="1983">1983</option><option value="1982">1982</option><option value="1981">1981</option><option value="1980">1980</option><option value="1979">1979</option><option value="1978">1978</option><option value="1977">1977</option><option value="1976">1976</option><option value="1975">1975</option><option value="1974">1974</option><option value="1973">1973</option><option value="1972">1972</option><option value="1971">1971</option><option value="1970">1970</option><option value="1969">1969</option><option value="1968">1968</option><option value="1967">1967</option><option value="1966">1966</option><option value="1965">1965</option><option value="1964">1964</option><option value="1963">1963</option><option value="1962">1962</option><option value="1961">1961</option><option value="1960">1960</option><option value="1959">1959</option><option value="1958">1958</option><option value="1957">1957</option><option value="1956">1956</option><option value="1955">1955</option><option value="1954">1954</option><option value="1953">1953</option><option value="1952">1952</option><option value="1951">1951</option>
+						  <option value="1950">1950</option>
+						  <span class="label is-error" ng-show="formStep1.form.yydob.$error.required && require">This is a mandatory field</span>
+						</select>
+				            </div>
+				          	
+							
+							
+						 
+					</div>
+					<div class="form-group">
+						<label for="userType" class="col-sm-4 control-label">Marital Status</label>
+						<div class="col-sm-8">
+							<select class="form-control" ng-model="register.userType" ng-required="isRequired"  name="userType" id="userType" >
+								<option value="" selected="selected">-Select-</option>
+								<option value="single">Single</option>
+								<option value="divorcee" >Divorcee</option>
+								<option value="WidowerWidow" >Widower/Widow</option>
+							</select>
+							<span class="label is-error" ng-show="formStep1.form.userType.$error.required && require">This is a mandatory field</span>
+						</div>
+					</div>
+			
+				
+					<div class="form-group">
+						<label for="weight" class="col-sm-4 control-label">Weight</label>
+						<div class="col-sm-8"   >
+							<input type="number" class="form-control" ng-model="register.weight" ng-required="isRequired"  name="weight" id="weight" placeholder="Weight">
+							<span class="label is-error" ng-show="formStep1.form.weight.$error.required && require">This is a mandatory field</span>
+						</div>
+					</div>
+				
+					<div class="form-group">
+						<label for="complexion" class="col-sm-4 control-label">Complexion</label>
+						<div class="col-sm-8"   >
+							<select class="form-control"  ng-model="register.complexion" ng-required="isRequired"  name="complexion" id="complexion" >
+								<option value="" selected="selected">-Select-</option>
+								<option value="Very Fair">Very Fair</option>
+								<option value="Fair">Fair</option>
+								<option value="Wheatish">Wheatish</option>
+								<option value="Wheatish Brown">Wheatish Brown</option>
+								<option value="Dark">Dark</option>
+							</select>
+							<span class="label is-error" ng-show="formStep1.form.complexion.$error.required && require">This is a mandatory field</span>
+						</div>
+				
+				</div>
+				
+					<div class="form-group">
+						<label for="diet" class="col-sm-4 control-label">Diet</label>
+						<div class="col-sm-8" >
+							<select class="form-control" ng-model="register.diet" ng-required="isRequired"  name="diet" id="diet" >		   <option value="" selected="selected">-Select-</option>						
+								 <option value="Vegetarian" >Vegetarian</option>
+								 <option value="Non Vegetarian">Non Vegetarian</option>
+								 <option value="N/A" >N/A</option>
+							</select>
+							<span class="label is-error" ng-show="formStep1.form.diet.$error.required && require">This is a mandatory field</span>
+						</div>
+					</div>
+				
+					
+				</div>	
+				
+			</div>
+			<div class="row">
+				<div class="text-right col-lg-1 col-md-2 col-sm-2 col-xs-4 col-lg-offset-11 col-sm-offset-10 col-md-offset-10 col-xs-offset-8">
+                    <button type="submit" ng-click="require=true;isRequired = true;" class="btn btn-default">Next</button>
+                </div>
+			</div>	
+		</fieldset>
+	</form>
+</div>
+	
